@@ -64,8 +64,10 @@ async function renderData(){
       let statement = ''
     for(i=start_index; i<=end_index; i++){
       statement +=`<h3>
+      <a href="${items[i].querySelector("link").innerHTML}" target="_blank" rel="noopener">
+        
       ${items[i].querySelector("title").innerHTML}
-
+      </a>   
        </h3>
        
        <h4>${moment(items[i].querySelector("pubDate").innerHTML).format("dddd, MMMM Do YYYY")}</h4>
